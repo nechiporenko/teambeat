@@ -1,0 +1,24 @@
+@import "modules/fonts";
+@import "modules/normalize";
+@import "modules/main";
+//other parts
+@import "modules/grid";
+@import "modules/button";
+@import "modules/forms";
+@import "modules/tables";
+@import "modules/utilities";
+@import "modules/animations";
+@import "modules/pagination";
+
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/sidebar";
+@import "partials/blog";
+
+//plugins vendors
+@import "vendor/vendor";
+
+
+
+

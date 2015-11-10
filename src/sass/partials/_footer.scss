@@ -1,0 +1,77 @@
+@import "../modules/base";
+/*Site Footer*/
+#site-footer{
+    @include px-to-rem(padding, 55px 0 40px);
+    @include px-to-rem(margin-top, 40px);
+    text-align:center;
+    font-family:$font-alt-medium;
+    font-weight:500;
+
+    .container{
+        position: relative;
+
+        &:before{
+            content:'';
+            display:block;
+            position: absolute;
+            height: 1px;
+            background: $border-color;
+            @include px-to-rem(left, $container-padding);
+            @include px-to-rem(right, $container-padding);
+            @include px-to-rem(top, -55px);
+        }
+    }
+
+    p{
+        line-height:1.85;
+    }
+}
+
+.bottom-menu{
+    padding:0;
+
+    li{
+        display:block;
+        margin:0;
+        line-height:1.85;
+        &:before{
+            display:none;
+        }
+    }
+
+    a{
+        color:$text-color;
+        text-decoration:none;
+
+        &:hover,
+        &:active{
+            color:$primary;
+            outline:none;
+        }
+    }
+}
+
+@media (min-width:$breakpoint){
+    #site-footer{
+        text-align:left;
+    }
+    .bottom-menu{
+        margin:0;
+    }
+}
+
+@media(min-width:1000px){
+     #site-footer .row{
+        width:62%;
+    }
+}
+
+@media (min-width:1200px){
+    #site-footer .container:before{
+        @include px-to-rem(left, 2*$container-padding);
+        @include px-to-rem(right, 2*$container-padding);
+    }
+}
+
+
+

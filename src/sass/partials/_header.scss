@@ -1,0 +1,75 @@
+@import "../modules/base";
+/*Site Header*/
+#site-header{
+    @include px-to-rem(padding, 24px 0);
+    @include px-to-rem(margin-bottom, 40px);
+    line-height:1;
+    
+    .container{
+        position: relative;
+
+        &:before{
+            content:'';
+            display:block;
+            position: absolute;
+            height: 1px;
+            background: $border-color;
+            @include px-to-rem(left, $container-padding);
+            @include px-to-rem(right, $container-padding);
+            @include px-to-rem(bottom, -24px);
+        }
+    }
+
+    &.single-post{
+        margin-bottom:0;
+
+       .container{
+           &:before{
+               left:0;
+               right:0;
+           }
+       }
+    }
+}
+@media (min-width:1200px){
+    #site-header .container:before{
+        @include px-to-rem(left, 2*$container-padding);
+        @include px-to-rem(right, 2*$container-padding);
+    }
+}
+a.logo{
+    display:block;
+    float:left;
+}
+ul.social{
+    float:right;
+    font-size: 0;
+    margin: 0;
+    @include px-to-rem(padding, 5px 0);
+    
+    li{
+        @include px-to-rem(margin, 0 0 0 15px);
+        display: inline-block;
+        @include font-size(1.6);
+        
+        &:first-child{
+            margin-left:0;
+        }
+
+        &:before{
+            display:none;
+        }
+    }
+    
+    a{
+        color:#c3bcac;
+        &:hover,
+        &:active{
+            color:#897e64;
+            text-decoration: none;
+        }
+    }
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+}

@@ -1,0 +1,49 @@
+﻿@import "_base.scss";
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    display: inline-block;
+    @include px-to-rem(height, 40px);
+    @include px-to-rem(padding, 0 30px);
+    color: $text-color;
+    text-align: center;
+    @include font-size(1.6);
+    font-family:$font-alt-medium;
+    font-weight: 500;
+    @include px-to-rem(line-height, 40px);
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    @include px-to-rem(border-radius, 6px);
+    border: 1px solid $border-color;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover,
+    &:focus{
+        color: #333;
+        border-color: #888;
+        outline: 0; 
+    }
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+    color: #FFF;
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:focus{
+        color: #FFF;
+        background-color: darken($primary, 10%);
+        border-color: darken($primary, 10%);
+    }
+}

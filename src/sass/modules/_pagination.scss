@@ -1,0 +1,53 @@
+﻿@import "_base.scss";
+/*Pagination*/
+.pagination{
+    @include px-to-rem(margin-bottom, 30px);
+    @include clear-fix;
+    text-align:center;
+
+    a, span{
+        display:inline-block;
+        text-decoration:none;
+        @include px-to-rem(padding, 0 6px);
+
+        &.current{
+            color:#897e64;
+        }
+
+        &.next,
+        &.prev{
+            position:relative;
+
+            &:after{
+                display:block;
+                position:absolute;
+                top:1px;
+                font-family:'fontello';
+            }
+        }
+
+        &.next{
+            float:right;
+            @include px-to-rem(padding-right, 20px);
+            &:after{
+                content:'\e804';
+                right:0;
+            }
+        }
+
+        &.prev{
+            float:left;
+            @include px-to-rem(padding-left, 20px);
+            &:after{
+                content:'\e807';
+                left:0;
+            }
+        }
+    }
+}
+
+@media(min-width:$breakpoint){
+    .pagination{
+        margin-bottom:0;
+    }
+}
