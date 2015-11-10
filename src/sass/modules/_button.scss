@@ -27,7 +27,8 @@ input[type="button"] {
     &:focus{
         color: #333;
         border-color: #888;
-        outline: 0; 
+        outline: 0;
+        text-decoration:none;
     }
 }
 
