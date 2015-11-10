@@ -48,7 +48,7 @@ ul.social{
     @include px-to-rem(padding, 5px 0);
     
     li{
-        @include px-to-rem(margin, 0 0 0 15px);
+        @include px-to-rem(margin, 0 0 0 10px);
         display: inline-block;
         @include font-size(1.6);
         
