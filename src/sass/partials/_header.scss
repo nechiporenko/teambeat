@@ -62,10 +62,12 @@ ul.social{
     }
     
     a{
-        color:#c3bcac;
+        //color:#c3bcac;
+        color:$text-color;
         &:hover,
         &:active{
-            color:#897e64;
+            //color:#897e64;
+            color:$primary;
             text-decoration: none;
         }
     }

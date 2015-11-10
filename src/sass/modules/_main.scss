@@ -38,17 +38,7 @@ textarea {
     resize: vertical;
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
 
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 
 
 /* Base Styles */
@@ -235,19 +225,6 @@ a, button, input[type="button"], input[type="submit"],
 }
 
 
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
-}
 
 /* ==========================================================================
    Helper classes
