@@ -1,9 +1,6 @@
 ﻿@import "../modules/_base.scss";
 
 /*Sidebar Subscribe Form*/
-.sidebar{
-    //position:relative;
-}
 .subscribe-form{
     @include px-to-rem(padding, 30px 20px);
     margin:0;
@@ -33,7 +30,7 @@
     }
 }
 
-@media(min-width:1200px){
+@media(min-width:$breakpoint){
     .sidebar{
         .subscribe-form{
             @include px-to-rem(max-width, 264px);

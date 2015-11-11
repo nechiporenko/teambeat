@@ -25,28 +25,42 @@
     }
 }
 
-@media (min-width:1200px){
-    .blog-header .container:before{
-        @include px-to-rem(left, 2*$container-padding);
-        @include px-to-rem(right, 2*$container-padding);
+@media (min-width:1300px){
+    .blog-header{
+        .container{
+            padding:0;
+            &:before{
+                left:0;
+                right:0;
+            }
+        }
     }
 }
 /*Header Logo*/
 .logo{
     float:left;
-    @include px-to-rem(width, 26px);
+    @include px-to-rem(width, 110px);
     @include px-to-rem(height, 36px);
     @include hide-text;
-    background-image:url(../img/logo-small.svg);
+    background-image:url(../img/logo.svg);
     background-position:left center;
     background-repeat:no-repeat;
-}
-@media (min-width:480px){
-    .logo{
-        @include px-to-rem(width, 110px);
-        background-image:url(../img/logo.svg);
+
+    &.logo-blog{
+        @include px-to-rem(width, 70px);
+        background-image:url(../img/logo-blog-small.svg);
     }
-    .no-svg .logo{
+}
+@media(min-width:480px){
+    .logo{
+        &.logo-blog{
+            @include px-to-rem(width, 156px);
+            background-image:url(../img/logo-blog.svg);
+        }
+    }
+}
+.no-svg{
+    .logo{
         background-image:url(../img/logo.png);
     }
 }
@@ -54,7 +68,7 @@
 
 /*Header Menu*/
 .menu{
-    float:left;
+    float:right;
     margin:0; padding:0;
     font-size: 0;
 
@@ -135,7 +149,6 @@
     @include px-to-rem(height, 36px);
     @include px-to-rem(line-height, 34px);
     @include px-to-rem(margin, 0 0 0 50px);
-    @include px-to-rem(padding, 0 10px);
     float:right;
     display:none;
 }
