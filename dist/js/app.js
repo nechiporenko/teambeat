@@ -65,15 +65,7 @@
 
 //Application Scripts
 jQuery(document).ready(function ($) {
-    var breakpoint = 770;
-   
-
-    //css helpers
-    $('table').find('tr:even').addClass('alt');
-    $('table').find('tr:first-child').addClass('first');
-    $('table').find('tr:last-child').addClass('last');
-    $('ul').find('li:first-child').addClass('first');
-    $('ul').find('li:last-child').addClass('last');
+    var breakpoint = 740;
     
     //placeholder helper
     if (!Modernizr.input.placeholder) {

@@ -28,8 +28,8 @@
 @media(min-width:1300px){
     .blog-footer{
         .container{
+            padding:0;
             &:before{
-                padding:0;
                 left:0;
                 right:0;
             }
@@ -82,5 +82,50 @@
     .footer-btn{
         float:right;
         @include px-to-rem(margin, 7px 0);
+    }
+}
+
+/*Footer Grid*/
+.f-column{
+    box-sizing:border-box;
+    min-height:1px;
+}
+@media(min-width:$breakpoint){
+    .f-column{
+        float:left;
+    }
+    .f-column--left,
+    .f-column--right{
+        width:100%;
+    }
+    .f-column--left{
+        .footer-about{
+            float:none;
+            @include px-to-rem(margin, 0 auto 25px);
+        }
+    }
+    .f-column--inner{
+        width:(100%)/3;
+        @include px-to-rem(padding-right, 20px);
+    }
+}
+@media(min-width:1000px){
+    .f-column--left{
+        width:50%;
+        .footer-about{
+            float:left;
+            margin:0;
+        }
+    }
+    .f-column--right{
+        width:50%;
+    }
+}
+@media(min-width:1300px){
+    .f-column--left{
+        width:45%;
+    }
+    .f-column--right{
+        width:55%;
     }
 }
