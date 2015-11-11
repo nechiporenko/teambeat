@@ -13,30 +13,6 @@
       "src": "fontelico"
     },
     {
-      "uid": "72b1277834cba5b7944b0a6cac7ddb0d",
-      "css": "rss",
-      "code": 59395,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
-      "css": "facebook",
-      "code": 59393,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "e9107949dd6c9e8ab2b29ae07156e38c",
-      "css": "linkedin",
-      "code": 59401,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "627abcdb627cb1789e009c08e2678ef9",
-      "css": "twitter",
-      "code": 59394,
-      "src": "fontawesome"
-    },
-    {
       "uid": "58b78b6ca784d5c3db5beefcd9e18061",
       "css": "left-small",
       "code": 59399,
@@ -59,6 +35,30 @@
       "css": "cancel",
       "code": 59400,
       "src": "mfglabs"
+    },
+    {
+      "uid": "cc4e62d1721c863fdc6944d2fd87521d",
+      "css": "linkedin",
+      "code": 59401,
+      "src": "zocial"
+    },
+    {
+      "uid": "2a3192d0f8fe0c7cf959168e68eb16d8",
+      "css": "rss",
+      "code": 59395,
+      "src": "zocial"
+    },
+    {
+      "uid": "b1ec8e90c2c85cf0035849980a3789b3",
+      "css": "twitter",
+      "code": 59393,
+      "src": "zocial"
+    },
+    {
+      "uid": "6f7586c6f99798c3c1de6123d1f6cfa9",
+      "css": "facebook",
+      "code": 59394,
+      "src": "zocial"
     },
     {
       "uid": "e6ad31134a018fdeb64efe72d39edd65",
