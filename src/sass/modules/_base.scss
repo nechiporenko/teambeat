@@ -8,9 +8,7 @@ $breakpoint:799px;
 $grid-gutter:1.8%;
 
 //colors
-//$text-color:#4e3d1e;
 $text-color:#58402C;
-//$primary:#b75130;
 $primary:#30488F;
 $border-color:#e1ddd4;
 
@@ -22,9 +20,14 @@ $font-alt-regular:'AvenirNext-Regular';
 
 
 //Mixins
-@mixin font-size($sizeValue: 1.6) {
-    font-size: ($sizeValue * 10) + px;
-    font-size: $sizeValue + rem;
+@function calculateRem($size) {
+  $remSize: $size / $em-base; //bourbon variable (16px);
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
 }
 
 
@@ -42,48 +45,37 @@ $font-alt-regular:'AvenirNext-Regular';
     }
 }
 
-//px/rem
-// html {
-//  font-size: 62.5%; //on _main.scss
-//}
 
-@function parseInt($n) {
-  @return $n / ($n * 0 + 1);
-}
 
 @mixin px-to-rem($property, $values) {
-  $px : ();
-  $rem: ();
+  $font-size: $em-base;
+  $px-values: ();
+  $rem-values: ();
 
   @each $value in $values {
-
-    @if $value == 0 or $value == auto {
-      $px : append($px , $value);
-      $rem: append($rem, $value);
-    }
-
-    @else {
-      $unit: unit($value);
-      $val: parseInt($value);
-
-      @if $unit == "px" {
-        $px : append($px,  $value);
-        $rem: append($rem, ($val / 10 + rem));
-      }
-
-      @if $unit == "rem" {
-        $px : append($px,  ($val * 10 + px));
-        $rem: append($rem, $value);
-      }
+    
+    @if $value == 0 or $value == 0px {
+      $px-values: join($px-values, 0);
+      $rem-values: join($rem-values, 0);
+    } @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
+      $new-rem-value: $value / $font-size;
+      $px-values: join($px-values, round($value));
+      $rem-values: join($rem-values, #{$new-rem-value}rem);
+    } @else if type-of($value) == number and not unitless($value) and (unit($value) == "%") {
+      $px-values: join($px-values, #{$value});
+      $rem-values: join($rem-values, #{$value});
+    } @else if $value == auto {
+      $px-values: join($px-values, auto);
+      $rem-values: join($rem-values, auto);
+    } @else {
+      $px-values: join($px-values, round($value * $font-size));
+      $rem-values: join($rem-values, #{$value}rem);
     }
   }
 
-  @if $px == $rem {
-    #{$property}: $px;
-  } @else {
-    #{$property}: $px;
-    #{$property}: $rem;
-  }
+  // output the converted rules
+  #{$property}: $px-values;
+  #{$property}: $rem-values;
 }
 
 //Grid Mixins
@@ -93,5 +85,5 @@ $font-alt-regular:'AvenirNext-Regular';
     margin: 0 auto;
     @include px-to-rem(padding, 0 $container-padding);
     box-sizing: border-box;
-    @include clear-fix;
+    @extend .clearfix;
 }

@@ -11,9 +11,10 @@ input[type="button"] {
     @include px-to-rem(padding, 0 30px);
     color: $text-color;
     text-align: center;
-    @include font-size(1.6);
+    @include font-size(16px);
     font-family:$font-alt-medium;
     font-weight: 500;
+    text-decoration:none;
     @include px-to-rem(line-height, 38px);
     white-space: nowrap;
     background-color: transparent;
@@ -23,6 +24,7 @@ input[type="button"] {
     box-sizing: border-box;
 
     &:hover,
+    &:active,
     &:focus{
         color: #333;
         border-color: #888;
@@ -41,6 +43,7 @@ input[type="button"].button-primary {
     border-color: $primary;
 
     &:hover,
+    &:active,
     &:focus{
         color: #FFF;
         background-color: darken($primary, 10%);

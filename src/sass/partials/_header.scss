@@ -61,7 +61,7 @@
     li{
         @include px-to-rem(margin, 0 0 0 20px);
         display: inline-block;
-        @include font-size(2);
+        @include font-size(20px);
 
         &:first-child{
             @include px-to-rem(margin-left, 10px);
@@ -100,7 +100,7 @@
     li{
         @include px-to-rem(margin, 0 0 0 10px);
         display: inline-block;
-        @include font-size(1.6);
+        @include font-size(16px);
         
         &:first-child{
             margin-left:0;

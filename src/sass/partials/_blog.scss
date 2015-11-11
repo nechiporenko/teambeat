@@ -2,7 +2,7 @@
 /*Blog meta*/
 .entry-meta{
     @include px-to-rem(margin-bottom, 20px);
-    @include font-size(1.4);
+    @include font-size(14px);
     font-family:$font-alt-medium;
     font-weight:500;
     color:#897e64;
@@ -52,7 +52,7 @@ a.read-more{
 .post-tags{
     @include clear-fix;
     color:$primary;
-    @include font-size(1.4);
+    @include font-size(14px);
     font-family:$font-alt-medium;
     font-weight:500;
 
@@ -83,10 +83,10 @@ a.read-more{
 
 /*Author*/
 .post-author{
-    @include font-size(1.4);
+    @include font-size(14px);
     font-family:$font-alt-regular;
     font-weight:400;
-    @include clear-fix;
+    @extend .clearfix;
 
     .avatar{
         @include px-to-rem(width, 75px);
@@ -106,7 +106,7 @@ a.read-more{
     }
 
     .name{
-        @include font-size(1.6);
+        @include font-size(16px);
         font-family:$font-alt-medium;
         font-weight:500;
 
@@ -135,7 +135,7 @@ a.read-more{
     @include clear-fix;
     font-family:$font-alt-medium;
     font-weight:500;
-    @include font-size(1.4);
+    @include font-size(14px);
     color:#897e64;
     text-transform:uppercase;
     line-height:1.2;

@@ -1,20 +1,25 @@
 @import "modules/fonts";
 @import "modules/normalize";
 @import "modules/main";
-//other parts
+//modules
 @import "modules/grid";
 @import "modules/button";
 @import "modules/forms";
-@import "modules/tables";
 @import "modules/utilities";
-@import "modules/animations";
-@import "modules/pagination";
 
 
+
+//page parts
 @import "partials/header";
-@import "partials/footer";
-@import "partials/sidebar";
 @import "partials/blog";
+@import "partials/sidebar";
+@import "partials/footer";
+
+
+//other parts
+@import "modules/tables";
+@import "modules/pagination";
+@import "modules/animations";
 
 //plugins vendors
 @import "vendor/vendor";

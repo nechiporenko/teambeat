@@ -43,17 +43,14 @@ textarea {
 
 /* Base Styles */
 
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
-  font-size: 62.5%; }
+  font-size: 100%; }
 body {
-  font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.5;
   font-weight: 300;
   font-family: $font-main, Helvetica, Arial, sans-serif;
-  color: $text-color; }
+  color: $text-color;
+}
 
 /* Typography */
 h1, h2, h3, h4, h5, h6, .title-h1, .title-h2, .title-h3 {
@@ -64,25 +61,20 @@ h1, h2, h3, h4, h5, h6, .title-h1, .title-h2, .title-h3 {
   line-height:1.25;
 }
 h1, .title-h1{
-    @include font-size(3);
+    @include font-size(30px);
     line-height: 1.2;
 }
 h2, .title-h2 {
-    @include font-size(2.4);
+    @include font-size(24px);
     line-height: 1.25;
 }
 h3, .titile-h3 {
-    @include font-size(2);
+    @include font-size(20px);
 }
-h4 {
-    @include font-size(1.8);
+h4, h5, h6 {
+    @include font-size(18px);
 }
-h5 {
-    @include font-size(1.8);
-}
-h6 {
-    @include font-size(1.8);
-}
+
 
 .title-h1,
 .title-h2,
@@ -94,7 +86,11 @@ h6 {
 p {
   margin-top: 0; }
 
-
+strong,
+b{
+    font-family:$font-alt-medium;
+    font-weight:500;
+}
 /* Links */
 a {
   color: $primary;
@@ -142,7 +138,7 @@ li {
 }
 /* Blockquote */
 blockquote{
-    @include font-size(1.8);
+    @include font-size(18px);
     margin-left:0;
     @include px-to-rem(padding, 0 0 0 15px);
     line-height:1.6;
@@ -152,7 +148,7 @@ blockquote{
     color:$primary;
     span{
         display:block;
-        @include font-size(1.2);
+        @include font-size(12px);
     }
 }
 
@@ -229,21 +225,6 @@ a, button, input[type="button"], input[type="submit"],
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
 .hidden {
     display: none !important;
     visibility: hidden;
@@ -260,16 +241,6 @@ a, button, input[type="button"], input[type="submit"],
     width: 1px;
 }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
 .invisible {
     visibility: hidden;
 }
@@ -282,6 +253,13 @@ a, button, input[type="button"], input[type="submit"],
 
 .clearfix:after {
     clear: both;
+}
+
+.clearfix{
+    @include clearfix;
+}
+.lt-ie9 .clearfix{
+    @include clear-fix;
 }
 
 

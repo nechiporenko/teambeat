@@ -2,7 +2,7 @@
 /*Pagination*/
 .pagination{
     @include px-to-rem(margin-bottom, 30px);
-    @include clear-fix;
+    @extend .clearfix;
     text-align:center;
 
     a, span{
