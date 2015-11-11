@@ -1,7 +1,7 @@
 @import "../modules/base";
 /*Site Header*/
-#site-header{
-    @include px-to-rem(padding, 24px 0);
+.blog-header{
+    @include px-to-rem(padding, 20px 0);
     @include px-to-rem(margin-bottom, 40px);
     line-height:1;
     
@@ -16,24 +16,17 @@
             background: $border-color;
             @include px-to-rem(left, $container-padding);
             @include px-to-rem(right, $container-padding);
-            @include px-to-rem(bottom, -24px);
+            @include px-to-rem(bottom, -20px);
         }
     }
 
     &.single-post{
-        margin-bottom:0;
-
-       .container{
-           &:before{
-               left:0;
-               right:0;
-           }
-       }
+        margin-bottom:0;      
     }
 }
 
 @media (min-width:1200px){
-    #site-header .container:before{
+    .blog-header .container:before{
         @include px-to-rem(left, 2*$container-padding);
         @include px-to-rem(right, 2*$container-padding);
     }
@@ -42,7 +35,7 @@
 .logo{
     float:left;
     @include px-to-rem(width, 26px);
-    @include px-to-rem(height, 26px);
+    @include px-to-rem(height, 36px);
     @include hide-text;
     background-image:url(../img/logo-small.svg);
     background-position:left center;
@@ -59,16 +52,20 @@
 }
 
 
-/*Header Menu link*/
+/*Header Menu*/
 .menu{
     float:left;
     margin:0; padding:0;
     font-size: 0;
 
     li{
-        @include px-to-rem(margin, 0 0 0 15px);
+        @include px-to-rem(margin, 0 0 0 20px);
         display: inline-block;
-        @include font-size(1.9);
+        @include font-size(2);
+
+        &:first-child{
+            @include px-to-rem(margin-left, 10px);
+        }
 
         &:before{
             display:none;
@@ -76,12 +73,20 @@
     }
     a{
         display:block;
-        @include px-to-rem(height, 26px);
-        @include px-to-rem(line-height, 30px);
+        @include px-to-rem(height, 36px);
+        @include px-to-rem(line-height, 40px);
         white-space:nowrap;
         font-family:$font-alt-medium;
         font-weight:500;
         text-decoration:none;
+    }
+}
+
+@media (min-width:$breakpoint){
+    .menu{
+        li{
+            @include px-to-rem(margin, 0 0 0 40px);
+        }
     }
 }
 
@@ -108,8 +113,8 @@
     
     a{
         display:block;
-        @include px-to-rem(height, 26px);
-        @include px-to-rem(line-height, 26px);
+        @include px-to-rem(height, 36px);
+        @include px-to-rem(line-height, 36px);
         color:$text-color;
         &:hover,
         &:active{
@@ -127,8 +132,11 @@
 .header-button{
     @extend .button;
     @extend .button-primary;
+    @include px-to-rem(height, 36px);
+    @include px-to-rem(line-height, 34px);
+    @include px-to-rem(margin, 0 0 0 50px);
+    @include px-to-rem(padding, 0 10px);
     float:right;
-    @include px-to-rem(margin, 0 0 0 30px);
     display:none;
 }
 
@@ -136,22 +144,5 @@
 @media(min-width:750px){
     .header-button{
         display:block;
-    }
-    #site-header{
-        @include px-to-rem(padding, 17px 0); //уменьшили пэддинг т.к. показали кнопку
-        .container{
-            &:before{
-                @include px-to-rem(bottom, -18px);
-            }
-        }
-    }
-    a.logo{
-        @include px-to-rem(margin-top,7px); //добавили 7 пикселей (40-26)/2, 40 - высота кнопки
-    }
-    .menu{
-        @include px-to-rem(padding, 7px 0 0 0);
-    }
-    .social{
-        @include px-to-rem(padding-top, 7px);
     }
 }

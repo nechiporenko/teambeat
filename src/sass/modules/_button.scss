@@ -14,8 +14,7 @@ input[type="button"] {
     @include font-size(1.6);
     font-family:$font-alt-medium;
     font-weight: 500;
-    @include px-to-rem(line-height, 40px);
-    text-decoration: none;
+    @include px-to-rem(line-height, 38px);
     white-space: nowrap;
     background-color: transparent;
     @include px-to-rem(border-radius, 6px);
