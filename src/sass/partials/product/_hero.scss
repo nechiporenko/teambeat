@@ -1,0 +1,38 @@
+﻿@import "../../modules/_base.scss";
+/*Hero Product Section*/
+.hero{
+
+}
+.hero__item{
+    @include px-to-rem(margin-bottom, 50px);
+    text-align:center;
+}
+.hero__item--center{
+    img{
+        @include transform(rotate(90deg));
+    }
+}
+@media(min-width:em(768)){
+    .hero{
+        @include px-to-rem(margin-bottom, 50px);
+        display:table;
+        width:100%;
+        table-layout:fixed;
+    }
+    .hero__item{
+        display:table-cell;
+        vertical-align:middle;
+        width:45%;
+        text-align:left;
+    }
+    .hero__item--center{
+        width:10%;
+        text-align:center;
+        img{
+            @include transform(rotate(0deg));
+        }
+    }
+    .hero__item--last{
+        text-align:right;
+    }
+}

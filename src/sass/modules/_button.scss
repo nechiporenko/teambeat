@@ -7,15 +7,15 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
     display: inline-block;
-    @include px-to-rem(height, 40px);
+    @include px-to-rem(height, 36px);
     @include px-to-rem(padding, 0 20px);
     color: $text-color;
     text-align: center;
-    @include font-size(16px);
+    @include font-size(14px);
     font-family:$font-alt-medium;
     font-weight: 500;
     text-decoration:none;
-    @include px-to-rem(line-height, 38px);
+    @include px-to-rem(line-height, 36px);
     white-space: nowrap;
     background-color: transparent;
     @include px-to-rem(border-radius, 6px);

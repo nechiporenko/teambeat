@@ -68,6 +68,20 @@
 	unicode-range: U+0020-25CA;
 }
 
+/*HarmoniaSansProCyr-Regular*/
+@font-face {
+	font-family:'HarmoniaSansProCyr-Regular';
+	src: url('../fonts/HarmoniaSansProCyr-Regular_directwrite.eot');
+	src: url('../fonts/HarmoniaSansProCyr-Regular_directwrite.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HarmoniaSansProCyr-Regular_directwrite.woff') format('woff'),
+		url('../fonts/HarmoniaSansProCyr-Regular_directwrite.ttf') format('truetype'),
+		url('../fonts/HarmoniaSansProCyr-Regular_directwrite.svg#HarmoniaSansProCyr-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
 /*Fontello Icons*/
 @font-face {
   font-family: 'fontello';

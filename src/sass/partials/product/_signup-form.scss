@@ -1,0 +1,54 @@
+﻿@import "../../modules/_base.scss";
+/*Sign Up Form*/
+.f-signup{
+    @include px-to-rem(margin-bottom, 50px);
+    text-align:center;
+    line-height:1;
+}
+.f-signup__btn{
+    @extend .button;
+}
+
+.f-signup__btn--light{
+    color:$primary;
+    border-color:$primary;
+    &:hover,
+    &:active,
+    &:focus{
+        color:$text-color;
+        border-color:$text-color;
+    }
+    img{
+        @include px-to-rem(margin, 0 10px 4px 0);
+    }
+}
+.f-signup__btn--dark{
+    @extend .button-primary;
+}
+
+.f-signup__text{
+    display:inline-block;
+    @include px-to-rem(margin,0 15px 15px);
+    @include px-to-rem(height, 36px);
+    @include px-to-rem(line-height, 36px);
+    white-space:nowrap;
+    @include font-size(13px);
+    font-family:$font-regular;
+    font-weight:400;
+    color:#bdb5af;
+}
+
+.f-signup__btn,
+.f-signup__input{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    @include px-to-rem(max-width, 200px);
+}
+@media(min-width:em(768)){
+    .f-signup__btn,
+    .f-signup__input{
+        display:inline-block;
+    }
+}
