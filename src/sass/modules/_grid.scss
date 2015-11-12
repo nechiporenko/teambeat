@@ -18,7 +18,7 @@
 
 
 
-/* For devices larger than 768px */
+/* For devices larger than 800px */
 @media (min-width: $breakpoint) {
   .column{
     margin-left: $grid-gutter;
@@ -71,14 +71,14 @@
     }
 }
 
-@media(min-width:1000px){
+@media(min-width:em(1008)){
     #content > aside{
         width:29.5%;
         margin-left:8.5%;
     }
 }
 
-@media(min-width:1200px){
+@media(min-width:em(1200)){
     .container{
         padding-left: 2*$container-padding;
         padding-right: 2*$container-padding;

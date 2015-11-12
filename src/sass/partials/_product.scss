@@ -1,0 +1,23 @@
+﻿@import "../modules/base";
+/*Product Page*/
+.product{
+    max-width:em(944);
+    margin:0 auto;
+}
+.product__title{
+    font-family:$font-semibold;
+    font-weight:600;
+    text-align:center;
+}
+.product__title--h1{
+    @include font-size(36px);
+    line-height:1.25;
+}
+.product__subtitle{
+    @include px-to-rem(margin-bottom, 50px);
+    font-family:$font-alt-medium;
+    font-weight:500;
+    @include font-size(20px);
+    line-height:1.5;
+    text-align:center;
+}

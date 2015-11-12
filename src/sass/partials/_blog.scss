@@ -50,7 +50,7 @@ a.read-more{
 
 /*Tags list*/
 .post-tags{
-    @include clear-fix;
+    @extend .clearfix;
     color:$primary;
     @include font-size(14px);
     font-family:$font-alt-medium;
@@ -75,7 +75,7 @@ a.read-more{
         padding:0;
     }
 }
-@media(min-width:1200px){
+@media(min-width:em(1200)){
     .post-image figure{
         @include px-to-rem(margin, 0 -50px);
     }
@@ -132,7 +132,7 @@ a.read-more{
 /*Share This*/
 .share-this{
     @include px-to-rem(margin, 50px 0 25px);
-    @include clear-fix;
+    @extend .clearfix;
     font-family:$font-alt-medium;
     font-weight:500;
     @include font-size(14px);

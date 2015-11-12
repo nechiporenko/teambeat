@@ -25,7 +25,7 @@
         text-align:left;
     }
 }
-@media(min-width:1300px){
+@media(min-width:em(1296)){
     .blog-footer{
         .container{
             padding:0;
@@ -38,7 +38,8 @@
 }
 
 /*About Section*/
-.footer-about{
+.f-about{
+    @include px-to-rem(margin, 0 0 30px 0);
     position:relative;
     img{
         @include px-to-rem(width, 50px);
@@ -53,7 +54,7 @@
     }
 }
 @media(min-width:$breakpoint){
-    .footer-about{
+    .f-about{
         float:left;
         @include px-to-rem(width, 460px);
         margin:0;
@@ -99,7 +100,7 @@
         width:100%;
     }
     .f-column--left{
-        .footer-about{
+        .f-about{
             float:none;
             @include px-to-rem(margin, 0 auto 25px);
         }
@@ -109,10 +110,10 @@
         @include px-to-rem(padding-right, 20px);
     }
 }
-@media(min-width:1000px){
+@media(min-width:em(1008)){
     .f-column--left{
         width:50%;
-        .footer-about{
+        .f-about{
             float:left;
             margin:0;
         }
@@ -121,11 +122,43 @@
         width:50%;
     }
 }
-@media(min-width:1300px){
+@media(min-width:em(1296)){
     .f-column--left{
         width:45%;
     }
     .f-column--right{
         width:55%;
+    }
+}
+/*Footer titles*/
+.f-title{
+    font-family:$font-semibold;
+    font-weight:600;
+}
+/*Footer menu*/
+.f-menu{
+    padding:0;
+    li{
+        @include px-to-rem(margin-bottom, 8px);
+        &:before{
+            display:none;
+        }
+    }
+
+    a{
+        @include font-size(14px);
+        color:$text-color;
+        font-family:$font-alt-medium;
+        font-weight:500;
+        &:hover,
+        &:active{
+            color:$primary;
+            text-decoration:none;
+        }
+    }
+}
+@media(min-width:$breakpoint){
+    .f-menu{
+        margin:0;
     }
 }

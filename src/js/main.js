@@ -1,6 +1,6 @@
 //Application Scripts
 jQuery(document).ready(function ($) {
-    var breakpoint = 740;
+    var breakpoint = 780;
     
     //placeholder helper
     if (!Modernizr.input.placeholder) {
