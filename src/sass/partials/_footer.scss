@@ -37,6 +37,15 @@
     }
 }
 
+.blog-footer--product{
+    margin-top:0;
+    .container{
+        &:before{
+            display:none;
+        }
+    }
+}
+
 /*About Section*/
 .f-about{
     @include px-to-rem(margin, 0 0 30px 0);

@@ -138,4 +138,15 @@ jQuery(document).ready(function ($) {
         $(this).hide();
         notice.fadeOut('slow');
     });
+
+    //scroll to section (link on Product Page menu)
+    $('.blog-header').on('click', '[data-scroll]', function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        if (target) {
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 800);
+        }
+    });
 });

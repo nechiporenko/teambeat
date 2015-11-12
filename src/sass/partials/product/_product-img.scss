@@ -1,0 +1,29 @@
+﻿@import "../../modules/_base.scss";
+/*Product fullpage images*/
+.product__img{
+    @include px-to-rem(max-width, 928px);
+    @include px-to-rem(margin, 0 auto);
+    @include px-to-rem(padding-top, 60.77%);
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.product__img--first{
+    background-image:url(../img/engage.png);
+    @include hidpi(1.5){
+        background-image:url(../img/engage_2x.png);
+    }
+}
+
+.product__img--second{
+    background-image:url(../img/observe.png);
+    @include hidpi(1.5){
+        background-image:url(../img/observe_2x.png);
+    }
+}
+.product__img--third{
+    background-image:url(../img/plan.png);
+    @include hidpi(1.5){
+        background-image:url(../img/plan_2x.png);
+    }
+}

@@ -8,11 +8,14 @@
 .product__title{
     font-family:$font-semibold;
     font-weight:600;
+    line-height:1.25;
     text-align:center;
 }
 .product__title--h1{
-    @include font-size(36px);
-    line-height:1.25;
+    @include font-size(36px);  
+}
+.product__title--h2{
+    @include font-size(30px);
 }
 .product__subtitle{
     @include px-to-rem(margin-bottom, 50px);
@@ -26,3 +29,4 @@
 @import "product/_signup-form.scss";
 @import "product/_hero.scss";
 @import "product/_quote.scss";
+@import "product/_product-img.scss";
