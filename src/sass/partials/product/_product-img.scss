@@ -10,20 +10,29 @@
 }
 .product__img--first{
     background-image:url(../img/engage.png);
-    @include hidpi(1.5){
-        background-image:url(../img/engage_2x.png);
-    }
 }
 
 .product__img--second{
     background-image:url(../img/observe.png);
-    @include hidpi(1.5){
-        background-image:url(../img/observe_2x.png);
-    }
 }
 .product__img--third{
     background-image:url(../img/plan.png);
-    @include hidpi(1.5){
-        background-image:url(../img/plan_2x.png);
+}
+
+@media(min-width:em(768)){
+    .product__img--first{
+        @include hidpi(1.5){
+            background-image:url(../img/engage_2x.png);
+        }
+    }
+    .product__img--second{
+        @include hidpi(1.5){
+            background-image:url(../img/observe_2x.png);
+        }
+    }
+    .product__img--third{
+        @include hidpi(1.5){
+            background-image:url(../img/plan_2x.png);
+        }
     }
 }
