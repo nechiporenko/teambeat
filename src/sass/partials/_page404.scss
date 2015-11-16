@@ -1,0 +1,60 @@
+﻿@import "../modules/_base.scss";
+/*Page 404*/
+.page-404{ //body
+    height:100%;
+    background:#ffe7d2;
+}
+
+.logo--centered{
+    display:block;
+    float:none;
+    @include px-to-rem(margin, 24px auto);
+}
+
+.header-404,
+.footer-404{
+    .container{
+        &:before{
+            display:none;
+        }
+    }
+}
+.header-404{
+    margin-bottom:0;
+}
+.footer-404{
+    margin-top:0;
+    a{
+        @include font-size(14px);
+    }
+}
+
+.content-404{
+    @include px-to-rem(max-width, 410px);
+    margin:0 auto;
+    @include px-to-rem(padding, 30px);
+    border-radius:7px;
+    border:1px solid $border-color;
+    background:#fff;
+    text-align:center;
+    box-sizing:border-box;
+
+    img{
+        @include px-to-rem(margin-bottom, 20px);
+    }
+
+    figcaption{
+        @include font-size(14px);
+        font-family:$font-regular;
+        font-weight:400;
+        text-align:left;
+        color:$text-color;
+    }
+
+    h1{
+        @include px-to-rem(margin-bottom, 10px);
+        font-family:$font-semibold;
+        font-weight:600;
+        @include font-size(20px);
+    }
+}
