@@ -1,0 +1,88 @@
+﻿@import "../modules/_base.scss";
+/*Tabs Page*/
+.tabs{
+    list-style-type:none;
+    @include px-to-rem(margin, 0 0 40px 0);
+    padding:0;
+    font-size:0;
+    line-height:1;
+    position:relative;
+
+    &:before{
+        content:'';
+        display:block;
+        height:1px;
+        background:$border-color;
+        position:absolute;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+}
+
+.tabs__item{
+    display:inline-block;
+    @include px-to-rem(margin, 0 0 0 28px);
+    @include font-size(20px);
+
+    &:first-child{
+        margin-left:0;
+    }
+
+    &:before{
+        display:none;
+    }
+}
+.tabs__link{
+    display:inline-block;
+    @include px-to-rem(padding, 7px 0);
+    color:$text-color;
+    font-family:$font-semibold;
+    box-sizing:border-box;
+    border-bottom:3px solid transparent;
+    white-space:nowrap;
+    &:hover,
+    &:active{
+        text-decoration:none;
+        color:$primary;
+    }
+
+    &.active{
+        color:$primary;
+        border-bottom-color:$primary;
+        cursor:default;
+    }
+}
+
+.tabs__content{
+    display:none;
+}
+.no-js{
+    .tabs__content{
+        display:block;
+    }
+}
+
+/*Tabs content style*/
+.t-page{
+    max-width:em(800);
+    font-family:$font-regular;
+    font-weight:400;
+    line-height:1.5;
+
+    h1, h2, h3, h4, h5, h6{
+        @include px-to-rem(margin-bottom, 0);
+        font-family:$font-semibold;
+        font-weight:600;
+        @include font-size(14px);
+    }
+
+    p{
+        @include px-to-rem(margin-bottom, 30px);
+        @include font-size(14px);
+    }
+}
+.t-page__date{
+    @include px-to-rem(margin-top, 7px);
+    color:#897e64;
+}
