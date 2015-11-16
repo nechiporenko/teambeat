@@ -96,7 +96,8 @@ a {
   text-decoration:none;
 }
 a:hover {
-  color: darken($primary, 10%);
+  //color: darken($primary, 10%);
+  color:#263972;
   text-decoration:underline;
 }
 

@@ -17,7 +17,7 @@ select {
     box-shadow: none;
     box-sizing: border-box;
 }
-/* Removes awkard default styles on some inputs for iOS */
+
 input[type="email"],
 input[type="search"],
 input[type="text"],
@@ -26,6 +26,16 @@ input[type="url"],
 input[type="password"],
 textarea {
     @include appearance(none);
+    @include placeholder{
+        color:#8b7d63;
+        text-overflow:ellipsis;
+    }
+
+    &:focus{
+        @include placeholder{
+            color:$text-color;
+        }
+    }
 }
 textarea {
     @include px-to-rem(min-height, 65px);
@@ -40,8 +50,9 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid $primary;
-  outline: 0; }
+  border: 1px solid #B49982;
+  outline: 0;
+}
 label,
 legend {
   display: block;
@@ -58,26 +69,6 @@ label > .label-body {
   display: inline-block;
   @include px-to-rem(margin-left, 5px);
   font-weight: normal; }
-
-/*placeholders*/
-$placeholder:#8b7d63;
-::-webkit-input-placeholder {
-   color: $placeholder;
-}
-:-moz-placeholder { 
-   color: $placeholder;  
-}
-::-moz-placeholder {  
-   color: $placeholder;  
-}
-:-ms-input-placeholder {  
-   color: $placeholder;  
-}
-
-input[placeholder]          {text-overflow:ellipsis;}
-input::-moz-placeholder     {text-overflow:ellipsis;} 
-input:-moz-placeholder      {text-overflow:ellipsis;} 
-input:-ms-input-placeholder {text-overflow:ellipsis;}    
 
 
 /*form validation*/

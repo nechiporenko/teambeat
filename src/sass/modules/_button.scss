@@ -46,7 +46,9 @@ input[type="button"].button-primary {
     &:active,
     &:focus{
         color: #FFF;
-        background-color: darken($primary, 10%);
-        border-color: darken($primary, 10%);
+        //background-color: darken($primary, 10%);
+        background-color:#263972;
+        //border-color: darken($primary, 10%);
+        border-color:#263972;
     }
 }

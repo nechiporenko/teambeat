@@ -12,11 +12,12 @@
 .f-signup__btn--light{
     color:$primary;
     border-color:$primary;
+
     &:hover,
     &:active,
     &:focus{
         color:$text-color;
-        border-color:$text-color;
+        border-color:#263972;
     }
     img{
         @include px-to-rem(margin, 0 10px 4px 0);
@@ -52,6 +53,7 @@
         display:inline-block;
     }
 }
+
 
 /*Sign Up Section*/
 .signup{
