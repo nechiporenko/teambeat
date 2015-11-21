@@ -10,6 +10,8 @@ $settings_list = array(
 	'twitter_link',
 
   'facebook_link',
+  
+  'linkedin_link',
 
   'rss_link',
 
@@ -131,6 +133,16 @@ td { padding: 5px; }
   <td><input type="text" name="facebook_link" class="ss_text" value="<?php echo stripslashes(stripslashes(get_option($shortname.'_facebook_link',''))); ?>" /></td>
 
 </tr>
+
+
+<tr>
+
+  <td>Linkedin Link:</td>
+
+  <td><input type="text" name="linkedin_link" class="ss_text" value="<?php echo stripslashes(stripslashes(get_option($shortname.'_linkedin_link',''))); ?>" /></td>
+
+</tr>
+
 
 <tr>
 

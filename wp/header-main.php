@@ -29,21 +29,23 @@
 
             ga('create', 'UA-65230543-1', 'auto');
             ga('send', 'pageview');
+mixpanel.track("Blog visitor");
           </script>
     </head>
 <body>
-	<header class="blog-header single-post">
+	<header class="blog-header">
 		<div class="container">
-			<a href="<?php bloginfo('url'); ?>/blog" class="logo logo-blog" title="Teambit">
+			<a href="<?php bloginfo('url'); ?>" class="logo" title="Teambit">
 				Teambit
 			</a>
-			<a href="<?php bloginfo('url'); ?>" class="header-button">Check out Teambit</a>
-			<?php $shortname = "teambeat"; ?>
-			<ul class="social">
-				<li><a href="<?php echo get_option($shortname.'_twitter_link',''); ?>" target="_blank"><i class="icon-twitter"></i></a></li>
-				<li><a href="<?php echo get_option($shortname.'_facebook_link',''); ?>" target="_blank"><i class="icon-facebook"></i></a></li>
-				<li><a href="<?php echo get_option($shortname.'_linkedin_link',''); ?>" target="_blank"><i class="icon-linkedin"></i></a></li>
-				<li><a href="<?php echo get_option($shortname.'_rss_link',''); ?>" target="_blank"><i class="icon-rss"></i></a></li>
+			<ul class="menu">
+				<li><a href="<?php bloginfo('url'); ?>/blog">Blog</a></li>
+				<?php if ( is_home() || is_front_page() ) { ?>
+				<li><a href="http://app.teambit.io/signin">Sign in</a></li>
+				<?php } else { ?>
+				<li><a href="<?php bloginfo('url'); ?>http://app.teambit.io/signin">Sign in</a></li>
+				<?php } ?>
+				
 			</ul>
 		</div>
 	</header>

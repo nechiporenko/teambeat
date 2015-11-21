@@ -52,15 +52,25 @@
 				</nav>
 				<hr />
 				<div class="post-author">
-					<figure class="avatar">
-						<a href="#"><img src="http://placehold.it/75x75" alt="" /></a>
+					<figure class="author-avatar">
+						<?php echo  get_wp_user_avatar(); ?>
 					</figure>
 					<div class="description">
 						<div class="name">
-							<a href="#">Alex Potrivaev</a>
+							<?php the_author_posts_link(); ?>
 						</div>
-						Pellentesque habitant morbi tristique senectus et netus et malesuada fames<br />
-						<a href="#">@alexpotrivaev</a>
+						<?php
+							$a=get_the_author_meta('description');
+							echo $a;
+						?>
+						<br />
+						<?php
+							$twitter_profile = get_the_author_meta( 'twitter_profile' );
+							$twitter_name = get_the_author_meta( 'twitter_name' );
+							if ( $twitter_profile && $twitter_profile != '' ) {
+								echo '<a href="' . esc_url($twitter_profile) . '">'.$twitter_name.'</a>';
+							}
+						?>
 					</div>
 				</div>
 			</footer>

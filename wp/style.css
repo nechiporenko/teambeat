@@ -71,3 +71,27 @@ a img.aligncenter {
 /**/
 /* Custom Style Section */
 /**/
+
+/*Hide SHARE button on social links*/
+a.addtoany_share_save{
+   display:none;
+}
+.a2a_kit{
+   text-transform:none;
+}
+
+.addtoany_list{
+  line-height:1.5;
+}
+
+
+
+/*Hide page numbers on pagination block*/
+.nav-links .page-numbers{
+  display:none;
+}
+
+.nav-links .page-numbers.next,
+.nav-links .page-numbers.prev{
+  display:inline-block;
+}

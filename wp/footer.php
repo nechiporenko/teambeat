@@ -1,21 +1,13 @@
-	<footer id="site-footer">
+	<footer class="blog-footer">
 		<div class="container">
-			<div class="row">
-				<nav class="one-third column">
-					<span class="title-h2">Support</span>
-					<?php $shortname = "teambeat"; ?>
-					<ul class="bottom-menu">
-						<li><a href="/contacts">Contact us</a></li>
-						<li><a href="<?php echo get_option($shortname.'_twitter_link',''); ?>">Twitter</a></li>
-						<li><a href="<?php echo get_option($shortname.'_facebook_link',''); ?>">Facebook</a></li>
-					</ul>
-				</nav>
-				<div class="two-thirds column">
-					<span class="title-h2">About</span>
-					<p><?php if(function_exists('show_text_block')) { echo show_text_block('about', true); } ?></p>
-				</div>
-			</div>
-		</div>
+			<figure class="f-about">
+				<img src="<?php bloginfo('template_directory'); ?>/img/logo-small.svg" alt="Teambit" />
+				<figcaption>
+					<a href="<?php bloginfo('url'); ?>">Teambit</a> is everything you need to make your organization a great place to work.
+				</figcaption>
+			</figure>
+			<a href="<?php bloginfo('url'); ?>" class="footer-btn">Learn more about Teambit <i class="icon-right-small"></i></a>
+		</div><!--/container-->
 	</footer>
 
 <!-- js files -->

@@ -39,6 +39,11 @@
     color:#bdb5af;
 }
 
+.f-signup__input{
+    font-family:$font-regular;
+    @include font-size(14px);
+}
+
 .f-signup__btn,
 .f-signup__input{
     display:block;
