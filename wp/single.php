@@ -52,7 +52,7 @@
 				</nav>
 				<hr />
 				<div class="post-author">
-					<figure class="author-avatar">
+					<figure class="avatar">
 						<?php echo  get_wp_user_avatar(); ?>
 					</figure>
 					<div class="description">

@@ -38,10 +38,21 @@
 }
 
 .blog-footer--product{
-    margin-top:0;
+    //margin-top:0;
     .container{
         &:before{
-            display:none;
+            //display:none;
+        }
+    }
+}
+
+@media(min-width:em(940)){
+    .blog-footer--product{
+        margin-top:0;
+        .container{
+            &:before{
+                display:none;
+            }
         }
     }
 }
